@@ -6,7 +6,7 @@ Spring은 웹 쪽에서 많이 쓰이고 있어서 자바를 이용한 웹 프�
 
 # 2. Spring을 써보자
 Spring을 그래서 한 번 써보기로 하였다. 예전 이클립스에서 STS를 활용하여 개발하였을때 자주 열받았던 기억이 있어서 IntelliJ를 활용하기로 하였다. 헌데 구글에 Spring을 설정하는 법들을 찾아보니 블로그들마다 전부 제각기 다른 방법으로 설정하고 있었다. 버전업이 되면서 바뀌는 부분들이 있는 듯 하였다. 일단 아파치가 필요하다. 아파치 홈페이지에서 원하는 버전을 받아주면 되는데 나는 제일 최신인 9버전을 받았다. 그리고 IntelliJ에서 Maven 카테고리를 선택하여 maven-archetype-webapp을 선택해준다. 
-![spring01](https://github.com/cosmicb0y/images/2-spring/spring01.png)
+![spring01](HackdayResearch/images/2-spring/spring01.png)
 
 GroupId와 ArtifactId를 설정해준다. 
 ![spring02](https://github.com/cosmicb0y/images/2-spring/spring02.png)

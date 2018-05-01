@@ -1,4 +1,4 @@
-spring Research
+Spring Research
 ==============
 
 # 1. Spring이란
@@ -16,7 +16,7 @@ maven을 세팅하는 창을 나오는데 그냥 기본설정으로 넘어가면
 
 project name도 원하는 대로 설정해주면 된다.
 
-프로젝트에 Add Framework Support를 해준다.
+프로젝트에 Add Framework Support를 해준다.  
 ![spring04](images/2-spring/spring04.png)
 
 Spring MVC를 선택해준다.

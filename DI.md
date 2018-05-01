@@ -132,7 +132,7 @@ public class StudentInfo {
 
 applicatinCTX.xml의 <beans> 태그 사이에 bean들을 만들어준다. studend1처럼 작성해도 되고, student2처럼 작성해도 모두 똑같이 작동한다. 그리고 studentInfo bean에 student1을 참조하도록 하였다.
 ```xml
-    <bean id="student1" class="com.javalec.ex.Student">
+    <bean id="student1" class="com.hackday.diexample.Student">
         <constructor-arg>
             <value>홍길동</value>
         </constructor-arg>
@@ -147,14 +147,14 @@ applicatinCTX.xml의 <beans> 태그 사이에 bean들을 만들어준다. studen
         </constructor-arg>
     </bean>
 
-    <bean id="student2" class="com.javalec.ex.Student">
+    <bean id="student2" class="com.hackday.diexample.Student">
         <constructor-arg value="홍길동"/>
         <constructor-arg value="9살"/>
         <constructor-arg value="2학년"/>
         <constructor-arg value="10번"/>
     </bean>
 
-    <bean id="studentInfo" class="com.javalec.ex.StudentInfo">
+    <bean id="studentInfo" class="com.hackday.diexample.StudentInfo">
         <constructor-arg>
             <ref bean="student1"/>
         </constructor-arg>

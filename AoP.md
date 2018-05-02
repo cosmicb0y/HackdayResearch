@@ -8,6 +8,7 @@ Spring에서는 Proxy를 이용하여 AOP가 구현되어 있는데, 공통기�
 외부 호출 ------> Proxy -----> Target(핵심기능)
 
 그리고 AOP에서는 다양한 용어가 쓰인다.
+
 |용어|뜻|
 ----|----
 Aspect | 공통기능
@@ -17,6 +18,7 @@ Pointcut | 실제로 Advice가 적용된 부분
 Weaving | Advice를 핵심 기능에 적용하는 것
 
 Advice의 종류는 다음과 같다.
+
 |종류|뜻|
 ----|----
 Before | Join Point 이전에 Advice 실행

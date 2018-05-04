@@ -59,7 +59,7 @@ src/main 폴더에 webapp/WEB-INF 폴더를 만들고 index.jsp를 생성해주�
 ![mvc9](images/6-mvc/mvc9.png)
 
 그리고 내용은 다음과 같이 적었다.
-'''jsp
+```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>

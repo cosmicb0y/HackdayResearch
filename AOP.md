@@ -29,7 +29,7 @@ Around | Join point를 둘러싼(around) Advice로서, method 실행 전/후 및
 
 ## 2. 어떻게 구현하나요
 바로 구현하면서 보자. DI와 마찬가지로 XML 스키마 기반으로 AOP를 구현할 수도 있고, Annotation을 통해 AOP를 구현할 수도 있다.
-Spring Boot로 프로젝트를 만들어주는데 이번에는 Dependency를 골라주어야한다. Core에서 Aspect를 선택해주자.
+Spring Boot로 프로젝트를 만들어주는데 이번에는 Dependency를 골라주어야한다. Core에서 Aspect를 선택해주자.  
 ![aop1](images/5-aop/aop1.png)
 
 그러면 일단 구현 준비는 끝이다! Spring Boot 짱짱
@@ -212,7 +212,7 @@ public class MainClass {
 }
 ```
 Main 클래스는 뭐 별 다른점이 없다. Around 속성이 적용되었으니 student.getSudentInfo()와 worker.getWorkerInfo()의 시작과 끝에서 advice가 실행될 것이다.
-실행해보자!
+실행해보자!  
 ![aop2](images/5-aop/aop2.png)
 
 ### Annotation을 이용한 AOP 구현
@@ -254,7 +254,7 @@ public class LogAOP {
     }
 }
 ```
-그리고 실행해보자.
+그리고 실행해보자.  
 ![aop3](images/5-aop/aop3.png)
 
 당연하게도 결과는 동일하다.

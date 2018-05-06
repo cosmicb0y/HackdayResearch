@@ -35,19 +35,21 @@ public class MainClass {
 
 돌려보니 안된다. 찾아보니 JMagick 버전과 동일한 ImageMagick dll 파일이 필요하다고 해서 간단히 받으면 되겠지 했는데, 현재 호환되는 버전의 dll이 배포되고 있지가 않다. 현재 배포되고 있는 ImageMagick은 7.0.7이고, JMagick은 6.6.9이다. 그래서 옛날 버전을 모아놓은 repo가 있겠지해서 찾아봤는데 없다... 당시 소스코드를 받았는데 dll은 다운로드가 안된다... 2011년도에 배포했던 버전 같다. 그래서 JMagick이 최신버전에 호환되는 인터페이스를 내놓았겠지 했는데 JMagick 홈페이지에 들어가니 오히려 gradle에서 가져온 버전보다 더 구버전에서 업데이트가 멈춰있다. 잠시 패닉에 빠졌다. JMagick의 repo가 있어서 찾아보니 6.7.7까지의 브랜치가 있다. 이 버전도 dll을 구할 수가 없었다. 제작자도 빌드 안한지 오래됐다고 인정했다.
 ![jmagick1](images/7-jmagick/jmagick1.png) 
+
 그래서 어떡하지 하다가 이슈에서 답을 찾았다. 직접 빌드를 하라는 것이다. 
+
 ![jmagick2](images/7-jmagick/jmagick2.png)
 
-### 1. 일단 이 repo를 다운로드하고
-### 2. VS 2017 Community를 인스톨
-### 3. ImageMagick을 C++ 라이브러리 옵션을 체크하고 인스톨
-### 4. jmagick/win32/Makefile.all 을 ../src로 복사
-### 5. Makefile.all을 좀 고쳐야한다는데 자기가 고쳐놨단다.
-### 6. src/ImageInfo.java:482의 present를 감싸고 있는 <>를 삭제
-### 7. src/magick_DrawInfo.c:382의 "#if MagickLibVersion \< 0x700"를 비롯한 매크로 행들을 삭제하고 else 부분 이였던 내용만 남겨둔다. 바로 밑에 있는 method도 똑같이 삭제
-### 8. x64 native command Tools prompt for vs 2017를 관리자권한으로 실행
-### 9. src 폴더로 이동
-### 10. nmake -f Makefile.all ALL
+1. 일단 이 repo를 다운로드하고
+2. VS 2017 Community를 인스톨
+3. ImageMagick을 C++ 라이브러리 옵션을 체크하고 인스톨
+4. jmagick/win32/Makefile.all 을 ../src로 복사
+5. Makefile.all을 좀 고쳐야한다는데 자기가 고쳐놨단다.
+6. src/ImageInfo.java:482의 present를 감싸고 있는 <>를 삭제
+7. src/magick_DrawInfo.c:382의 "#if MagickLibVersion \< 0x700"를 비롯한 매크로 행들을 삭제하고 else 부분 이였던 내용만 남겨둔다. 바로 밑에 있는 method도 똑같이 삭제
+8. x64 native command Tools prompt for vs 2017를 관리자권한으로 실행
+9. src 폴더로 이동
+10. nmake -f Makefile.all ALL
 
 했는데 안된다.
 ![jmagick3](images/7-jmagick/jmagick3.png)
@@ -96,6 +98,7 @@ JDKBIN=$(JDKDIR)\bin
 ![jmagick8](images/7-jmagick/jmagick8.jpg)
 
 돌려보자.
+
 ![jmagick10](images/7-jmagick/jmagick10.png)
 
 우아하게 에러없이 종료된다 ^_^
